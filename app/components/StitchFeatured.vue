@@ -18,8 +18,8 @@
 
       <!-- Project Cards -->
       <div class="flex flex-col gap-16 md:gap-20">
-        <!-- Project 1: UNI Review -->
-        <div class="project-card group cursor-pointer">
+        <!-- Project 1: Campus Pulse -->
+        <NuxtLink to="/campus-pulse" class="project-card group cursor-pointer block">
           <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
             <!-- Image -->
             <div
@@ -27,7 +27,7 @@
             >
               <img
                 src="/uni.png"
-                alt="UNI Review"
+                alt="Campus Pulse"
                 class="project-image max-w-full max-h-full object-contain"
               />
             </div>
@@ -45,7 +45,7 @@
               <h3
                 class="text-black text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight group-hover:opacity-60 transition-opacity"
               >
-                UNI Review
+                Campus Pulse
               </h3>
               <p class="text-grey-light text-base leading-relaxed mt-1">
                 A comprehensive platform for Pakistani students to review, rate,
@@ -54,20 +54,27 @@
               <div class="flex flex-wrap gap-2 mt-4">
                 <span
                   class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
-                  >React Native</span
+                  >Flutter</span
                 >
                 <span
                   class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
-                  >Node.js</span
+                  >Dart</span
                 >
                 <span
                   class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
-                  >MongoDB</span
+                  >Appwrite</span
                 >
+              </div>
+              <div class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-black group-hover:gap-3 transition-all">
+                View App
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="2" y1="7" x2="12" y2="7" />
+                  <polyline points="7,2 12,7 7,12" />
+                </svg>
               </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
 
         <!-- Divider -->
         <div class="w-full h-px bg-black/5"></div>
