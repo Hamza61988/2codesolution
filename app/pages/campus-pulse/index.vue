@@ -34,17 +34,9 @@
               review courses, and make smarter academic decisions — built on trust, data, and community.
             </p>
 
-            <!-- App Screens -->
-            <div class="cp-screens">
-              <div class="cp-screen-item">
-                <img src="/uni.png" alt="Campus Pulse home screen" class="cp-screen-img" />
-              </div>
-              <div class="cp-screen-item cp-screen-center">
-                <img src="/uni2.png" alt="Campus Pulse reviews screen" class="cp-screen-img" />
-              </div>
-              <div class="cp-screen-item">
-                <img src="/uni3.png" alt="Campus Pulse profile screen" class="cp-screen-img" />
-              </div>
+            <!-- App Screen -->
+            <div class="cp-screen-showcase">
+              <img src="/uni.png" alt="Campus Pulse app" class="cp-showcase-img" />
             </div>
 
             <!-- Feature Pills -->
@@ -107,6 +99,17 @@
                 </svg>
               </NuxtLink>
             </div>
+
+            <!-- Delete Account -->
+            <NuxtLink to="/campus-pulse/delete-account" class="cp-delete-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6l-1 14H6L5 6"/>
+                <path d="M10 11v4M14 11v4"/>
+                <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+              </svg>
+              <span>Request Account Deletion</span>
+            </NuxtLink>
           </div>
         </div>
       </section>
@@ -237,56 +240,25 @@ onMounted(async () => {
   margin-bottom: 3rem;
 }
 
-/* App Screens */
-.cp-screens {
-  display: grid;
-  grid-template-columns: 1fr 1.15fr 1fr;
-  gap: 1rem;
-  align-items: flex-end;
-  margin-bottom: 3rem;
-  background: var(--lightgray);
-  border-radius: 1.5rem;
-  padding: 2rem 2rem 0;
-  overflow: hidden;
-}
-
-.cp-screen-item {
+/* App Screen Showcase */
+.cp-screen-showcase {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
-.cp-screen-center {
-  transform: translateY(0.5rem);
-}
-
-.cp-screen-img {
-  width: 100%;
-  max-width: 200px;
+.cp-showcase-img {
+  width: auto;
+  max-width: 420px;
   height: auto;
   object-fit: contain;
   display: block;
-  border-radius: 1rem 1rem 0 0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 640px) {
-  .cp-screens {
-    grid-template-columns: 1fr;
-    padding: 1.25rem 1.25rem 0;
-  }
-
-  .cp-screen-center {
-    transform: none;
-  }
-
-  .cp-screen-item:not(:first-child) {
-    display: none;
-  }
-
-  .cp-screen-img {
-    max-width: 100%;
-    border-radius: 0.75rem 0.75rem 0 0;
+  .cp-showcase-img {
+    max-width: 85vw;
   }
 }
 
@@ -395,5 +367,27 @@ onMounted(async () => {
     padding: 1rem 1.25rem;
     font-size: 0.9375rem;
   }
+}
+
+/* Delete account button */
+.cp-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: var(--grey-light);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cp-delete-btn:hover {
+  color: #e11d48;
 }
 </style>
