@@ -102,13 +102,13 @@
 
             <!-- Delete Account -->
             <NuxtLink to="/campus-pulse/delete-account" class="cp-delete-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <span>Request Account Deletion</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="3 6 5 6 21 6"/>
                 <path d="M19 6l-1 14H6L5 6"/>
                 <path d="M10 11v4M14 11v4"/>
                 <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
               </svg>
-              <span>Request Account Deletion</span>
             </NuxtLink>
           </div>
         </div>
@@ -371,23 +371,33 @@ onMounted(async () => {
 
 /* Delete account button */
 .cp-delete-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  justify-content: space-between;
+  width: 100%;
   margin-top: 0.75rem;
-  padding: 0.6rem 1.25rem;
+  padding: 1.25rem 1.75rem;
   background: transparent;
-  border: none;
-  border-radius: 0;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 1rem;
   color: var(--grey-light);
-  font-size: 0.8125rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
 }
 
 .cp-delete-btn:hover {
+  border-color: #e11d48;
   color: #e11d48;
+  background: #fff1f2;
+}
+
+@media (max-width: 640px) {
+  .cp-delete-btn {
+    padding: 1rem 1.25rem;
+    font-size: 0.9375rem;
+  }
 }
 </style>
