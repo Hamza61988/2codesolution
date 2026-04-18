@@ -134,7 +134,7 @@
         <div class="w-full h-px bg-black/5"></div>
 
         <!-- Project 3: Aqua Homes -->
-        <div class="project-card group cursor-pointer">
+        <a href="https://www.aquahomesolution.company/" target="_blank" rel="noopener noreferrer" class="project-card group cursor-pointer block">
           <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
             <!-- Image -->
             <div
@@ -180,9 +180,16 @@
                   >Next.js</span
                 >
               </div>
+              <div class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-black group-hover:gap-3 transition-all">
+                Visit Site
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="2" y1="7" x2="12" y2="7" />
+                  <polyline points="7,2 12,7 7,12" />
+                </svg>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- All projects link -->

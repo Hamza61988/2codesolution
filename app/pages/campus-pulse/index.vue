@@ -3,7 +3,7 @@
     <!-- Navbar -->
     <header class="campus-navbar">
       <div class="cp-nav-inner">
-        <NuxtLink to="/" class="nav-logo">2code Solution</NuxtLink>
+        <NuxtLink to="/" class="nav-logo">2code Solutionss</NuxtLink>
         <NuxtLink to="/" class="cp-nav-back">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
             <line x1="14" y1="8" x2="2" y2="8" />
@@ -34,9 +34,38 @@
               review courses, and make smarter academic decisions — built on trust, data, and community.
             </p>
 
-            <!-- App Screen -->
+            <!-- App Screens: Dual Mockup with Phone Frames -->
             <div class="cp-screen-showcase">
-              <img src="/uni.png" alt="Campus Pulse app" class="cp-showcase-img" />
+              <div class="cp-mockup-duo">
+                <!-- Phone 1 -->
+                <div class="cp-phone-frame">
+                  <div class="cp-phone-btn cp-phone-vol-up"></div>
+                  <div class="cp-phone-btn cp-phone-vol-down"></div>
+                  <div class="cp-phone-btn cp-phone-power"></div>
+                  <div class="cp-phone-screen">
+                    <div class="cp-phone-notch">
+                      <div class="cp-phone-speaker"></div>
+                      <div class="cp-phone-camera"></div>
+                    </div>
+                    <img src="/mockup1.jpeg" alt="Campus Pulse app screen - teacher ratings" class="cp-screen-item" loading="eager" fetchpriority="high" />
+                    <div class="cp-phone-home"></div>
+                  </div>
+                </div>
+                <!-- Phone 2 -->
+                <div class="cp-phone-frame">
+                  <div class="cp-phone-btn cp-phone-vol-up"></div>
+                  <div class="cp-phone-btn cp-phone-vol-down"></div>
+                  <div class="cp-phone-btn cp-phone-power"></div>
+                  <div class="cp-phone-screen">
+                    <div class="cp-phone-notch">
+                      <div class="cp-phone-speaker"></div>
+                      <div class="cp-phone-camera"></div>
+                    </div>
+                    <img src="/mockup2.jpeg" alt="Campus Pulse app screen - university feed" class="cp-screen-item" loading="eager" fetchpriority="high" />
+                    <div class="cp-phone-home"></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Feature Pills -->
@@ -123,13 +152,24 @@
 import { onMounted, nextTick } from "vue";
 
 useHead({
-  title: "Campus Pulse — EdTech App by 2code Solution",
+  title: "Campus Pulse — Anonymous University Reviews App | 2code Solutionss",
   meta: [
     {
       name: "description",
       content:
-        "Campus Pulse is an anonymous platform for Pakistani university students to rate teachers, review courses, and make smarter academic decisions.",
+        "Campus Pulse is a free anonymous platform for Pakistani university students to rate teachers, review courses, and discover universities — built by 2code Solutionss.",
     },
+    { name: "keywords", content: "Campus Pulse, Pakistani university app, rate teachers, anonymous reviews, university ratings, edtech Pakistan, Flutter app, 2code Solutionss" },
+    { name: "robots", content: "index, follow" },
+    { property: "og:type", content: "website" },
+    { property: "og:title", content: "Campus Pulse — Anonymous University Reviews App" },
+    { property: "og:description", content: "Pakistani students rate teachers, review courses, and make smarter academic decisions anonymously. Built by 2code Solutionss." },
+    { property: "og:image", content: "/mockup1.jpeg" },
+    { property: "og:url", content: "https://2codesolution.com/campus-pulse" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Campus Pulse — University Reviews App" },
+    { name: "twitter:description", content: "Rate teachers & review courses anonymously. Built for Pakistani students by 2code Solutionss." },
+    { name: "twitter:image", content: "/mockup1.jpeg" },
   ],
 });
 
@@ -246,19 +286,137 @@ onMounted(async () => {
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
+  padding: 2rem 0;
 }
 
-.cp-showcase-img {
-  width: auto;
-  max-width: 420px;
+.cp-mockup-duo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* ── Phone Frame ── */
+.cp-phone-frame {
+  position: relative;
+  display: inline-block;
+  background: #111;
+  border-radius: 3rem;
+  padding: 10px;
+  box-shadow:
+    0 0 0 2px #333,
+    0 0 0 4px #111,
+    0 32px 64px rgba(0, 0, 0, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+/* Screen area — wraps image naturally */
+.cp-phone-screen {
+  position: relative;
+  border-radius: calc(3rem - 10px);
+  overflow: hidden;
+  background: #000;
+  line-height: 0; /* remove inline gap under img */
+}
+
+/* Image fills the screen — height from natural aspect ratio */
+.cp-screen-item {
+  width: 220px;
   height: auto;
-  object-fit: contain;
   display: block;
 }
 
+/* Notch overlay at top of screen */
+.cp-phone-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 28px;
+  background: #111;
+  border-radius: 0 0 1.25rem 1.25rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.cp-phone-speaker {
+  width: 40px;
+  height: 5px;
+  background: #2a2a2a;
+  border-radius: 3px;
+}
+
+.cp-phone-camera {
+  width: 8px;
+  height: 8px;
+  background: #1e2d40;
+  border-radius: 50%;
+  border: 1.5px solid #2a3a50;
+}
+
+/* Home indicator overlay at bottom of screen */
+.cp-phone-home {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 2px;
+  z-index: 10;
+}
+
+/* Side buttons on the frame */
+.cp-phone-btn {
+  position: absolute;
+  background: #222;
+  border-radius: 2px;
+}
+
+.cp-phone-vol-up {
+  left: -4px;
+  top: 80px;
+  width: 4px;
+  height: 30px;
+}
+
+.cp-phone-vol-down {
+  left: -4px;
+  top: 120px;
+  width: 4px;
+  height: 30px;
+}
+
+.cp-phone-power {
+  right: -4px;
+  top: 100px;
+  width: 4px;
+  height: 44px;
+}
+
 @media (max-width: 640px) {
-  .cp-showcase-img {
-    max-width: 85vw;
+  .cp-screen-item {
+    width: 150px;
+  }
+  .cp-phone-frame {
+    border-radius: 2.25rem;
+    padding: 8px;
+  }
+  .cp-phone-screen {
+    border-radius: calc(2.25rem - 8px);
+  }
+  .cp-mockup-duo {
+    gap: 1.25rem;
+  }
+  .cp-phone-notch {
+    width: 80px;
+    height: 20px;
   }
 }
 
@@ -401,3 +559,4 @@ onMounted(async () => {
   }
 }
 </style>
+

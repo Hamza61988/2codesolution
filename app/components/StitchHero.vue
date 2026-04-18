@@ -5,7 +5,7 @@
       <header class="w-container">
         <div class="navbar">
           <!-- Logo -->
-          <a href="#" class="nav-logo"> 2code Solution </a>
+          <a href="#" class="nav-logo"> 2code Solutions </a>
 
           <!-- Desktop Nav Links -->
           <nav class="nav-menu hidden md:flex">
@@ -182,7 +182,7 @@ const scrollDownRef = ref(null);
 const infinityLineRef = ref(null);
 const menuOpen = ref(false);
 
-const heroText = "2code Solution";
+const heroText = "2code Solutions";
 
 onMounted(async () => {
   if (!import.meta.client) return;

@@ -3,7 +3,7 @@
     <!-- Navbar -->
     <header class="campus-navbar">
       <div class="cp-nav-inner">
-        <NuxtLink to="/" class="nav-logo">2code Solution</NuxtLink>
+        <NuxtLink to="/" class="nav-logo">2code Solutions</NuxtLink>
         <NuxtLink to="/campus-pulse" class="cp-nav-back">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
             <line x1="14" y1="8" x2="2" y2="8" />
@@ -402,3 +402,4 @@ onMounted(async () => {
   opacity: 0.8;
 }
 </style>
+

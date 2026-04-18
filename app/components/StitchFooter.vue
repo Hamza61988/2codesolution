@@ -141,7 +141,7 @@
           <div class="footer-social-block">
             <div class="section-label-500">Follow us on:</div>
             <div class="footer-social-icons">
-              <a href="#" aria-label="LinkedIn" class="social-icon">
+              <a href="https://www.linkedin.com/company/2-code-solution/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -154,20 +154,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" aria-label="X / Twitter" class="social-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                  />
-                </svg>
-              </a>
-              <a href="#" aria-label="Instagram" class="social-icon">
+              <a href="https://www.instagram.com/2_code_solution/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -180,6 +167,20 @@
                   />
                 </svg>
               </a>
+              <a href="mailto:info2codesolution@gmail.com" aria-label="Email us" class="social-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </a>
+            </div>
+            <div style="margin-top: 0.75rem;">
+              <a href="mailto:info2codesolution@gmail.com" class="footer-email-cta">info2codesolution@gmail.com</a>
             </div>
           </div>
         </div>
@@ -187,10 +188,10 @@
 
       <!-- Bottom bar -->
       <div class="footer-bottom">
-        <span class="nav-logo">2code Solution</span>
+        <span class="nav-logo">2code Solutions</span>
         <div class="footer-bottom-right">
           <span class="rights-text"
-            >© 2026 2code Solution. All rights reserved</span
+            >© 2026 2code Solutions. All rights reserved</span
           >
           <div class="sect-dot-flex" style="margin-bottom: 0">
             <div class="dot"></div>
@@ -200,7 +201,11 @@
             </div>
           </div>
         </div>
-        <a href="#" class="scroll-up-link">
+        <button
+          @click="scrollToTop"
+          class="scroll-up-link"
+          aria-label="Scroll to top"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -213,7 +218,7 @@
               fill="white"
             />
           </svg>
-        </a>
+        </button>
       </div>
     </div>
 
@@ -224,6 +229,10 @@
 
 <script setup>
 import { onMounted, nextTick } from "vue";
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
 /** Split heading text into word spans wrapped in overflow:hidden containers */
 function splitIntoWords(el) {

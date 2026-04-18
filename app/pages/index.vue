@@ -37,13 +37,24 @@ onMounted(async () => {
 });
 
 useHead({
-  title: "2code Solution — We Build Digital Products",
+  title: "2code Solutions — We Build Digital Products",
   meta: [
     {
       name: "description",
       content:
-        "2code Solution builds full-stack digital products — from mobile apps to web platforms. Your trusted technology partner.",
+        "2code Solutions builds full-stack digital products — from mobile apps to web platforms. Web development, UI/UX, Flutter apps, and backend systems. Your trusted technology partner in Pakistan.",
     },
+    { name: "keywords", content: "2code Solutions, web development Pakistan, mobile app development, Flutter, React, Next.js, UI/UX design, backend development, software agency Pakistan" },
+    { name: "robots", content: "index, follow" },
+    { name: "author", content: "2code Solutions" },
+    { property: "og:type", content: "website" },
+    { property: "og:site_name", content: "2code Solutions" },
+    { property: "og:title", content: "2code Solutions — We Build Digital Products" },
+    { property: "og:description", content: "Full-stack web & mobile development agency. We build web platforms, Flutter apps, UI/UX designs, and backend systems." },
+    { property: "og:url", content: "https://2codesolution.com" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "2code Solutions — We Build Digital Products" },
+    { name: "twitter:description", content: "Full-stack digital products — web, mobile, design & backend. Pakistan's trusted tech partner." },
   ],
 });
 </script>

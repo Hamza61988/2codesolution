@@ -10,7 +10,7 @@
           href="#"
           class="text-black text-lg font-semibold tracking-tight hover:opacity-70 transition-opacity"
         >
-          2code Solution
+          2code Solutions
         </a>
 
         <!-- Desktop Nav -->

@@ -6,6 +6,10 @@
         <div class="dot"></div>
         <span class="dot-label">We're explorers</span>
       </div>
+      <div class="text-grey-light text-sm mb-8" style="margin-top: -0.75rem;">
+        or email us at
+        <a href="mailto:info2codesolution@gmail.com" class="text-black font-medium hover:opacity-60 transition-opacity" style="text-decoration: underline; text-underline-offset: 3px;">info2codesolution@gmail.com</a>
+      </div>
 
       <!-- Section heading -->
       <div class="mb-10">

@@ -73,7 +73,7 @@ const dragProgress = ref(20);
 const testimonials = [
   {
     quote:
-      "2code Solution delivered exactly what we needed — a fast, polished product that exceeded our expectations. Their technical expertise and communication were outstanding from start to finish.",
+      "2code Solutions delivered exactly what we needed — a fast, polished product that exceeded our expectations. Their technical expertise and communication were outstanding from start to finish.",
     name: "Ahmed Khan",
     role: "Founder, UNI Review",
     initials: "AK",
@@ -94,7 +94,7 @@ const testimonials = [
   },
   {
     quote:
-      "Professional, responsive, and genuinely invested in getting things right. 2code Solution is exactly the kind of tech partner every growing business needs.",
+      "Professional, responsive, and genuinely invested in getting things right. 2code Solutions is exactly the kind of tech partner every growing business needs.",
     name: "Fatima Hassan",
     role: "CEO, Aqua Homes",
     initials: "FH",
@@ -229,3 +229,4 @@ onMounted(async () => {
   display: none;
 }
 </style>
+
