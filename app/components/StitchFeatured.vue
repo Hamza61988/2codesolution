@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <section id="work" class="section-gap">
     <div class="section-card">
       <!-- Dot label -->
@@ -38,7 +38,7 @@
                   class="dot"
                   style="width: 0.375rem; height: 0.375rem"
                 ></div>
-                <span class="dot-label text-grey-light text-xs"
+                <span class="dot-label text-xs"
                   >EdTech Platform</span
                 >
               </div>
@@ -53,15 +53,15 @@
               </p>
               <div class="flex flex-wrap gap-2 mt-4">
                 <span
-                  class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
+                  class="px-3 py-1.5 rounded-full bg-[rgba(6,182,212,0.08)] text-cyan text-xs font-medium"
                   >Flutter</span
                 >
                 <span
-                  class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
+                  class="px-3 py-1.5 rounded-full bg-[rgba(6,182,212,0.08)] text-cyan text-xs font-medium"
                   >Dart</span
                 >
                 <span
-                  class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
+                  class="px-3 py-1.5 rounded-full bg-[rgba(6,182,212,0.08)] text-cyan text-xs font-medium"
                   >Appwrite</span
                 >
               </div>
@@ -101,7 +101,7 @@
                   class="dot"
                   style="width: 0.375rem; height: 0.375rem"
                 ></div>
-                <span class="dot-label text-grey-light text-xs">AI Tool</span>
+                <span class="dot-label text-xs">AI Tool</span>
               </div>
               <h3
                 class="text-black text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight group-hover:opacity-60 transition-opacity"
@@ -114,15 +114,15 @@
               </p>
               <div class="flex flex-wrap gap-2 mt-4">
                 <span
-                  class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
+                  class="px-3 py-1.5 rounded-full bg-[rgba(6,182,212,0.08)] text-cyan text-xs font-medium"
                   >Python</span
                 >
                 <span
-                  class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
+                  class="px-3 py-1.5 rounded-full bg-[rgba(6,182,212,0.08)] text-cyan text-xs font-medium"
                   >Discord API</span
                 >
                 <span
-                  class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
+                  class="px-3 py-1.5 rounded-full bg-[rgba(6,182,212,0.08)] text-cyan text-xs font-medium"
                   >OpenAI Whisper</span
                 >
               </div>
@@ -153,7 +153,7 @@
                   class="dot"
                   style="width: 0.375rem; height: 0.375rem"
                 ></div>
-                <span class="dot-label text-grey-light text-xs"
+                <span class="dot-label text-xs"
                   >Corporate Website</span
                 >
               </div>
@@ -168,15 +168,15 @@
               </p>
               <div class="flex flex-wrap gap-2 mt-4">
                 <span
-                  class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
+                  class="px-3 py-1.5 rounded-full bg-[rgba(6,182,212,0.08)] text-cyan text-xs font-medium"
                   >React</span
                 >
                 <span
-                  class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
+                  class="px-3 py-1.5 rounded-full bg-[rgba(6,182,212,0.08)] text-cyan text-xs font-medium"
                   >Tailwind CSS</span
                 >
                 <span
-                  class="px-3 py-1.5 rounded-full bg-[#f0f2f3] text-grey-light text-xs font-medium"
+                  class="px-3 py-1.5 rounded-full bg-[rgba(6,182,212,0.08)] text-cyan text-xs font-medium"
                   >Next.js</span
                 >
               </div>
@@ -196,7 +196,7 @@
       <div class="mt-16 flex justify-center">
         <a
           href="#"
-          class="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-black/15 text-black text-sm font-medium hover:bg-black hover:text-white transition-all duration-300"
+          class="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-black/15 text-black text-sm font-medium hover:bg-cyan hover:text-white hover:border-cyan transition-all duration-300"
         >
           All Projects
           <svg
@@ -247,7 +247,7 @@ onMounted(async () => {
   const { ScrollTrigger } = await import("gsap/ScrollTrigger");
   gsap.registerPlugin(ScrollTrigger);
 
-  // ── Dot label fade-up ──
+  // â”€â”€ Dot label fade-up â”€â”€
   const dotFlex = document.querySelector("#work .sect-dot-flex");
   if (dotFlex) {
     gsap.from(dotFlex, {
@@ -264,7 +264,7 @@ onMounted(async () => {
     });
   }
 
-  // ── Heading line-by-line reveal ──
+  // â”€â”€ Heading line-by-line reveal â”€â”€
   const heading = document.querySelector("#work h2");
   if (heading) {
     const words = splitIntoWords(heading);
@@ -282,7 +282,7 @@ onMounted(async () => {
     });
   }
 
-  // ── Project cards: image + info staggered reveal ──
+  // â”€â”€ Project cards: image + info staggered reveal â”€â”€
   const cards = document.querySelectorAll(".project-card");
   cards.forEach((card) => {
     const img = card.querySelector(".project-image");
@@ -341,7 +341,7 @@ onMounted(async () => {
     }
   });
 
-  // ── Dividers fade in ──
+  // â”€â”€ Dividers fade in â”€â”€
   const dividers = document.querySelectorAll("#work .w-full.h-px");
   dividers.forEach((div) => {
     gsap.from(div, {
@@ -358,7 +358,7 @@ onMounted(async () => {
     });
   });
 
-  // ── "All Projects" CTA fade up ──
+  // â”€â”€ "All Projects" CTA fade up â”€â”€
   const allProjectsBtn = document.querySelector("#work .mt-16 a");
   if (allProjectsBtn) {
     gsap.from(allProjectsBtn, {
@@ -376,3 +376,4 @@ onMounted(async () => {
   }
 });
 </script>
+

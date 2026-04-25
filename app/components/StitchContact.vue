@@ -8,7 +8,7 @@
       </div>
       <div class="text-grey-light text-sm mb-8" style="margin-top: -0.75rem;">
         or email us at
-        <a href="mailto:info2codesolution@gmail.com" class="text-black font-medium hover:opacity-60 transition-opacity" style="text-decoration: underline; text-underline-offset: 3px;">info2codesolution@gmail.com</a>
+        <a href="mailto:info2codesolution@gmail.com" class="font-medium hover:opacity-70 transition-opacity" style="color: var(--cyan); text-decoration: underline; text-underline-offset: 3px;">info2codesolution@gmail.com</a>
       </div>
 
       <!-- Section heading -->
@@ -113,7 +113,7 @@
           <!-- Submit -->
           <button
             type="submit"
-            class="w-full md:w-auto md:self-start px-8 py-3.5 rounded-full bg-black text-white text-sm font-medium hover:bg-grey-light transition-colors duration-300 mt-2"
+            class="w-full md:w-auto md:self-start px-8 py-3.5 rounded-full bg-cyan text-white text-sm font-medium hover:opacity-80 transition-opacity duration-300 mt-2"
           >
             Submit
           </button>

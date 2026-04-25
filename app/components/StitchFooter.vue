@@ -188,7 +188,15 @@
 
       <!-- Bottom bar -->
       <div class="footer-bottom">
-        <span class="nav-logo">2code Solutions</span>
+        <span class="nav-logo" style="line-height:0">
+          <svg width="60" height="36" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" aria-label="2code Solutions">
+            <rect x="40" y="20" width="320" height="192" rx="32" ry="32" fill="none" stroke="#0a0a0a" stroke-width="5"/>
+            <text x="200" y="148" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="120" letter-spacing="-6" fill="#0a0a0a">
+              <tspan fill="#00d4d4">2</tspan>CS
+            </text>
+            <circle cx="348" cy="28" r="14" fill="#00d4d4"/>
+          </svg>
+        </span>
         <div class="footer-bottom-right">
           <span class="rights-text"
             >© 2026 2code Solutions. All rights reserved</span

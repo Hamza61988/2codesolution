@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -11,6 +11,7 @@
   --white: #fff;
   --lightgray: #eff2f3;
   --grey-light: #787878;
+  --cyan: #00d4d4;
   --section-radius: 2rem;
   --pad: 3.75rem;
 }
@@ -72,7 +73,7 @@ body {
 
 /* ── Selection ── */
 ::selection {
-  background: #d0d4d6;
+  background: rgba(6, 182, 212, 0.2);
   color: var(--black);
 }
 
@@ -91,6 +92,10 @@ body {
   display: inline-block;
   opacity: 0;
   transform: translateY(60px);
+}
+
+.hero-char--accent {
+  color: var(--cyan);
 }
 
 /* ── Line-by-line text reveal ── */
@@ -187,8 +192,8 @@ body {
 }
 
 .scroll-down-link:hover {
-  background-color: var(--grey);
-  color: var(--black);
+  background-color: var(--cyan);
+  color: var(--white);
 }
 
 /* ── Infinity Line (Marquee) inside hero — absolute bottom ── */
@@ -267,7 +272,7 @@ body {
 .sect-dot-flex .dot {
   width: 0.5rem;
   height: 0.5rem;
-  background-color: var(--black);
+  background-color: var(--cyan);
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -275,7 +280,7 @@ body {
 .sect-dot-flex .dot-label {
   font-size: 0.875rem;
   font-weight: 400;
-  color: var(--black);
+  color: var(--cyan);
 }
 
 /* ── White Section Card ── */
@@ -377,7 +382,7 @@ body {
 }
 
 .grid-service-link:hover .service-name-text {
-  color: var(--black);
+  color: var(--cyan);
 }
 
 .s-arrow-wrap {
@@ -403,7 +408,7 @@ body {
 }
 
 .h-service-bg {
-  background-color: var(--grey);
+  background-color: rgba(6, 182, 212, 0.08);
   cursor: pointer;
   border-radius: 0.25rem;
   width: 100%;
@@ -491,7 +496,7 @@ body {
 }
 
 .form-input:focus {
-  border-color: var(--black);
+  border-color: var(--cyan);
 }
 
 /* ── Interest Pill ── */
@@ -513,12 +518,13 @@ body {
 }
 
 .pill-btn:hover {
-  border-color: var(--black);
+  border-color: var(--cyan);
+  color: var(--cyan);
 }
 
 .pill-btn.is-active {
-  background: var(--black);
-  border-color: var(--black);
+  background: var(--cyan);
+  border-color: var(--cyan);
   color: var(--white);
 }
 
@@ -574,6 +580,12 @@ body {
 
 .nav-logo:hover {
   opacity: 0.7;
+}
+
+.nav-logo-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .nav-menu {
@@ -652,7 +664,7 @@ body {
 }
 
 .btn-bg {
-  background-color: var(--black);
+  background-color: var(--cyan);
   width: 100%;
   height: 0%;
   position: absolute;
@@ -787,7 +799,8 @@ body {
 }
 
 .footer-submit-btn:hover {
-  opacity: 0.6;
+  color: var(--cyan);
+  opacity: 1;
 }
 
 .footer-privacy-note {
@@ -804,7 +817,7 @@ body {
 }
 
 .footer-privacy-link:hover {
-  color: var(--black);
+  color: var(--cyan);
 }
 
 .footer-social-block {
@@ -825,7 +838,7 @@ body {
 }
 
 .social-icon:hover {
-  color: var(--black);
+  color: var(--cyan);
 }
 
 .footer-email-cta {
@@ -843,12 +856,12 @@ body {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--black);
+  background: var(--cyan);
   transition: width 0.3s ease;
 }
 
 .footer-email-cta:hover {
-  color: var(--black);
+  color: var(--cyan);
 }
 
 .footer-email-cta:hover::after {
@@ -891,8 +904,8 @@ body {
 }
 
 .scroll-up-link:hover {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--cyan);
+  color: var(--white);
 }
 
 @media (max-width: 768px) {

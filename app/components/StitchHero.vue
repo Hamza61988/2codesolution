@@ -5,7 +5,15 @@
       <header class="w-container">
         <div class="navbar">
           <!-- Logo -->
-          <a href="#" class="nav-logo"> 2code Solutions </a>
+          <a href="#" class="nav-logo" style="line-height:0">
+            <svg width="72" height="43" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" aria-label="2code Solutions">
+              <rect x="40" y="20" width="320" height="192" rx="32" ry="32" fill="none" stroke="#0a0a0a" stroke-width="5"/>
+              <text x="200" y="148" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="120" letter-spacing="-6" fill="#0a0a0a">
+                <tspan fill="#00d4d4">2</tspan>CS
+              </text>
+              <circle cx="348" cy="28" r="14" fill="#00d4d4"/>
+            </svg>
+          </a>
 
           <!-- Desktop Nav Links -->
           <nav class="nav-menu hidden md:flex">
@@ -122,9 +130,11 @@
           class="text-black font-medium leading-[1.08] tracking-tight"
           style="font-size: clamp(2.75rem, 7vw, 5.5rem)"
         >
-          <span v-for="(char, idx) in heroText" :key="idx" class="hero-char">{{
-            char === " " ? "\u00A0" : char
-          }}</span>
+          <span
+            v-for="(char, idx) in heroText"
+            :key="idx"
+            :class="['hero-char', idx === 0 ? 'hero-char--accent' : '']"
+          >{{ char === ' ' ? ' ' : char }}</span>
         </h1>
         <p
           ref="subtitleRef"
@@ -221,8 +231,7 @@ onMounted(async () => {
     delay: 0.9,
   });
 
-  // Scroll trigger: toggle is-top class (exactly like Eloqwnt)
-  // hero-trigger-hide is at margin-top: 20rem in the reference
+  // Scroll trigger: toggle is-top class
   ScrollTrigger.create({
     trigger: heroSection.value,
     start: "top top",
@@ -235,7 +244,6 @@ onMounted(async () => {
     },
   });
 
-  // Also add a trigger for a slightly earlier response
   let ticking = false;
   const handleScroll = () => {
     if (ticking) return;

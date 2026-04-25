@@ -3,7 +3,15 @@
     <!-- Navbar -->
     <header class="campus-navbar">
       <div class="cp-nav-inner">
-        <NuxtLink to="/" class="nav-logo">2code Solutionss</NuxtLink>
+        <NuxtLink to="/" class="nav-logo" style="line-height:0">
+          <svg width="72" height="43" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" aria-label="2code Solutions">
+            <rect x="40" y="20" width="320" height="192" rx="32" ry="32" fill="none" stroke="#0a0a0a" stroke-width="5"/>
+            <text x="200" y="148" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="120" letter-spacing="-6" fill="#0a0a0a">
+              <tspan fill="#00d4d4">2</tspan>CS
+            </text>
+            <circle cx="348" cy="28" r="14" fill="#00d4d4"/>
+          </svg>
+        </NuxtLink>
         <NuxtLink to="/" class="cp-nav-back">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
             <line x1="14" y1="8" x2="2" y2="8" />
@@ -22,7 +30,7 @@
             <!-- Tag -->
             <div class="sect-dot-flex">
               <div class="dot"></div>
-              <span class="dot-label">EdTech · Mobile App</span>
+              <span class="dot-label">EdTech Â· Mobile App</span>
             </div>
 
             <!-- Title -->
@@ -31,7 +39,7 @@
             <!-- Subtitle -->
             <p class="cp-subtitle">
               The anonymous platform for Pakistani university students to rate teachers,
-              review courses, and make smarter academic decisions — built on trust, data, and community.
+              review courses, and make smarter academic decisions â€” built on trust, data, and community.
             </p>
 
             <!-- App Screens: Dual Mockup with Phone Frames -->
@@ -74,7 +82,7 @@
               <span class="cp-pill">Teacher Ratings</span>
               <span class="cp-pill">Course Insights</span>
               <span class="cp-pill">University Discovery</span>
-              <span class="cp-pill">Flutter · Dart</span>
+              <span class="cp-pill">Flutter Â· Dart</span>
               <span class="cp-pill">Appwrite Backend</span>
             </div>
 
@@ -98,7 +106,7 @@
                   </svg>
                 </div>
                 <h3 class="cp-about-title">Fully Anonymous</h3>
-                <p class="cp-about-body">Your identity is never exposed to other students, teachers, or institutions — only our moderation team can investigate abuse.</p>
+                <p class="cp-about-body">Your identity is never exposed to other students, teachers, or institutions â€” only our moderation team can investigate abuse.</p>
               </div>
               <div class="cp-about-card">
                 <div class="cp-about-icon">
@@ -152,23 +160,23 @@
 import { onMounted, nextTick } from "vue";
 
 useHead({
-  title: "Campus Pulse — Anonymous University Reviews App | 2code Solutionss",
+  title: "Campus Pulse â€” Anonymous University Reviews App | 2code Solutions",
   meta: [
     {
       name: "description",
       content:
-        "Campus Pulse is a free anonymous platform for Pakistani university students to rate teachers, review courses, and discover universities — built by 2code Solutionss.",
+        "Campus Pulse is a free anonymous platform for Pakistani university students to rate teachers, review courses, and discover universities â€” built by 2code Solutions.",
     },
-    { name: "keywords", content: "Campus Pulse, Pakistani university app, rate teachers, anonymous reviews, university ratings, edtech Pakistan, Flutter app, 2code Solutionss" },
+    { name: "keywords", content: "Campus Pulse, Pakistani university app, rate teachers, anonymous reviews, university ratings, edtech Pakistan, Flutter app, 2code Solutions" },
     { name: "robots", content: "index, follow" },
     { property: "og:type", content: "website" },
-    { property: "og:title", content: "Campus Pulse — Anonymous University Reviews App" },
-    { property: "og:description", content: "Pakistani students rate teachers, review courses, and make smarter academic decisions anonymously. Built by 2code Solutionss." },
+    { property: "og:title", content: "Campus Pulse â€” Anonymous University Reviews App" },
+    { property: "og:description", content: "Pakistani students rate teachers, review courses, and make smarter academic decisions anonymously. Built by 2code Solutions." },
     { property: "og:image", content: "/mockup1.jpeg" },
     { property: "og:url", content: "https://2codesolution.com/campus-pulse" },
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Campus Pulse — University Reviews App" },
-    { name: "twitter:description", content: "Rate teachers & review courses anonymously. Built for Pakistani students by 2code Solutionss." },
+    { name: "twitter:title", content: "Campus Pulse â€” University Reviews App" },
+    { name: "twitter:description", content: "Rate teachers & review courses anonymously. Built for Pakistani students by 2code Solutions." },
     { name: "twitter:image", content: "/mockup1.jpeg" },
   ],
 });
@@ -296,7 +304,7 @@ onMounted(async () => {
   gap: 2rem;
 }
 
-/* ── Phone Frame ── */
+/* â”€â”€ Phone Frame â”€â”€ */
 .cp-phone-frame {
   position: relative;
   display: inline-block;
@@ -311,7 +319,7 @@ onMounted(async () => {
   flex-shrink: 0;
 }
 
-/* Screen area — wraps image naturally */
+/* Screen area â€” wraps image naturally */
 .cp-phone-screen {
   position: relative;
   border-radius: calc(3rem - 10px);
@@ -320,7 +328,7 @@ onMounted(async () => {
   line-height: 0; /* remove inline gap under img */
 }
 
-/* Image fills the screen — height from natural aspect ratio */
+/* Image fills the screen â€” height from natural aspect ratio */
 .cp-screen-item {
   width: 220px;
   height: auto;

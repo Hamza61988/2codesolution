@@ -53,7 +53,7 @@
         <div class="h-[2px] bg-black/10 flex-1 rounded-full overflow-hidden">
           <div
             ref="dragBar"
-            class="h-full bg-black rounded-full transition-all duration-300"
+            class="h-full bg-cyan rounded-full transition-all duration-300"
             :style="{ width: dragProgress + '%' }"
           ></div>
         </div>
