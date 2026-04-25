@@ -1,34 +1,40 @@
 import Lenis from "lenis";
 
 export default defineNuxtPlugin(() => {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
   const lenis = new Lenis({
-    duration: 0.6,
+    duration: prefersReducedMotion ? 0.01 : 1.15,
     easing: (t: number) => 1 - Math.pow(1 - t, 4),
-    smoothWheel: true,
-    wheelMultiplier: 1.8,
-    touchMultiplier: 2,
-    lerp: 0.15,
+    smoothWheel: !prefersReducedMotion,
+    wheelMultiplier: 0.9,
+    touchMultiplier: 1.1,
+    syncTouch: true,
+    lerp: prefersReducedMotion ? 1 : 0.085,
   });
+
+  let rafId = 0;
 
   function raf(time: number) {
     lenis.raf(time);
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
   }
-  requestAnimationFrame(raf);
+  rafId = requestAnimationFrame(raf);
 
-  // Integrate with GSAP ScrollTrigger if available
-  if (import.meta.client) {
-    import("gsap").then(({ gsap }) => {
-      import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
-        gsap.registerPlugin(ScrollTrigger);
-        lenis.on("scroll", ScrollTrigger.update);
-        gsap.ticker.add((time: number) => {
-          lenis.raf(time * 1000);
-        });
-        gsap.ticker.lagSmoothing(0);
-      });
+  import("gsap/ScrollTrigger")
+    .then(({ ScrollTrigger }) => {
+      lenis.on("scroll", ScrollTrigger.update);
+    })
+    .catch(() => {
+      // ScrollTrigger is optional for pages that do not use GSAP.
     });
-  }
+
+  window.addEventListener("pagehide", () => {
+    cancelAnimationFrame(rafId);
+    lenis.destroy();
+  });
 
   return {
     provide: {
