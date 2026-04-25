@@ -9,8 +9,41 @@
         <a
           href="#"
           class="text-black text-lg font-semibold tracking-tight hover:opacity-70 transition-opacity"
+          style="line-height: 0"
         >
-          2code Solutions
+          <svg
+            width="72"
+            height="43"
+            viewBox="0 0 400 240"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="2code Solutions"
+          >
+            <rect
+              x="40"
+              y="20"
+              width="320"
+              height="192"
+              rx="32"
+              ry="32"
+              fill="none"
+              stroke="#0a0a0a"
+              stroke-width="5"
+            />
+            <text
+              x="200"
+              y="148"
+              text-anchor="middle"
+              font-family="'Plus Jakarta Sans', sans-serif"
+              font-weight="800"
+              font-size="120"
+              letter-spacing="-6"
+              fill="#0a0a0a"
+            >
+              <tspan fill="#00d4d4">2</tspan>
+              CS
+            </text>
+            <circle cx="348" cy="28" r="14" fill="#00d4d4" />
+          </svg>
         </a>
 
         <!-- Desktop Nav -->

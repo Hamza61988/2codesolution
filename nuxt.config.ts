@@ -43,8 +43,6 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["lenis/dist/lenis.css"],
-
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
   },

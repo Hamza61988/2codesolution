@@ -1,26 +1,6 @@
 <template>
   <div class="relative w-full min-h-screen font-sans overflow-x-hidden">
-    <!-- Navbar -->
-    <header class="campus-navbar">
-      <div class="cp-nav-inner">
-        <NuxtLink to="/" class="nav-logo" style="line-height:0">
-          <svg width="72" height="43" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" aria-label="2code Solutions">
-            <rect x="40" y="20" width="320" height="192" rx="32" ry="32" fill="none" stroke="#0a0a0a" stroke-width="5"/>
-            <text x="200" y="148" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="120" letter-spacing="-6" fill="#0a0a0a">
-              <tspan fill="#00d4d4">2</tspan>CS
-            </text>
-            <circle cx="348" cy="28" r="14" fill="#00d4d4"/>
-          </svg>
-        </NuxtLink>
-        <NuxtLink to="/" class="cp-nav-back">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
-            <line x1="14" y1="8" x2="2" y2="8" />
-            <polyline points="7,3 2,8 7,13" />
-          </svg>
-          Back
-        </NuxtLink>
-      </div>
-    </header>
+    <CampusNavbar back-to="/" back-label="Back" />
 
     <main>
       <!-- Hero / Intro Section -->
@@ -38,8 +18,9 @@
 
             <!-- Subtitle -->
             <p class="cp-subtitle">
-              The anonymous platform for Pakistani university students to rate teachers,
-              review courses, and make smarter academic decisions â€” built on trust, data, and community.
+              The anonymous platform for Pakistani university students to rate
+              teachers, review courses, and make smarter academic decisions â€”
+              built on trust, data, and community.
             </p>
 
             <!-- App Screens: Dual Mockup with Phone Frames -->
@@ -55,7 +36,13 @@
                       <div class="cp-phone-speaker"></div>
                       <div class="cp-phone-camera"></div>
                     </div>
-                    <img src="/mockup1.jpeg" alt="Campus Pulse app screen - teacher ratings" class="cp-screen-item" loading="eager" fetchpriority="high" />
+                    <img
+                      src="/mockup1.jpeg"
+                      alt="Campus Pulse app screen - teacher ratings"
+                      class="cp-screen-item"
+                      loading="eager"
+                      fetchpriority="high"
+                    />
                     <div class="cp-phone-home"></div>
                   </div>
                 </div>
@@ -69,7 +56,13 @@
                       <div class="cp-phone-speaker"></div>
                       <div class="cp-phone-camera"></div>
                     </div>
-                    <img src="/mockup2.jpeg" alt="Campus Pulse app screen - university feed" class="cp-screen-item" loading="eager" fetchpriority="high" />
+                    <img
+                      src="/mockup2.jpeg"
+                      alt="Campus Pulse app screen - university feed"
+                      class="cp-screen-item"
+                      loading="eager"
+                      fetchpriority="high"
+                    />
                     <div class="cp-phone-home"></div>
                   </div>
                 </div>
@@ -90,47 +83,105 @@
             <div class="cp-about-grid">
               <div class="cp-about-card">
                 <div class="cp-about-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="10" cy="10" r="8"/>
-                    <path d="M10 6v4l3 3"/>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="10" cy="10" r="8" />
+                    <path d="M10 6v4l3 3" />
                   </svg>
                 </div>
                 <h3 class="cp-about-title">Real-time Insights</h3>
-                <p class="cp-about-body">Students post and read reviews instantly, giving the most up-to-date picture of campus life.</p>
+                <p class="cp-about-body">
+                  Students post and read reviews instantly, giving the most
+                  up-to-date picture of campus life.
+                </p>
               </div>
               <div class="cp-about-card">
                 <div class="cp-about-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
-                    <circle cx="10" cy="7" r="4"/>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+                    <circle cx="10" cy="7" r="4" />
                   </svg>
                 </div>
                 <h3 class="cp-about-title">Fully Anonymous</h3>
-                <p class="cp-about-body">Your identity is never exposed to other students, teachers, or institutions â€” only our moderation team can investigate abuse.</p>
+                <p class="cp-about-body">
+                  Your identity is never exposed to other students, teachers, or
+                  institutions â€” only our moderation team can investigate
+                  abuse.
+                </p>
               </div>
               <div class="cp-about-card">
                 <div class="cp-about-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                   </svg>
                 </div>
                 <h3 class="cp-about-title">Data-driven Decisions</h3>
-                <p class="cp-about-body">Aggregated ratings and structured course data help students choose the right university, department, and teachers.</p>
+                <p class="cp-about-body">
+                  Aggregated ratings and structured course data help students
+                  choose the right university, department, and teachers.
+                </p>
               </div>
             </div>
 
             <!-- Legal Buttons -->
             <div class="cp-legal-buttons">
-              <NuxtLink to="/campus-pulse/terms-and-conditions" class="cp-legal-btn">
+              <NuxtLink
+                to="/campus-pulse/terms-and-conditions"
+                class="cp-legal-btn"
+              >
                 <span>Terms &amp; Conditions</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <line x1="3" y1="9" x2="15" y2="9" />
                   <polyline points="9,3 15,9 9,15" />
                 </svg>
               </NuxtLink>
               <NuxtLink to="/campus-pulse/privacy-policy" class="cp-legal-btn">
                 <span>Privacy Policy</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <line x1="3" y1="9" x2="15" y2="9" />
                   <polyline points="9,3 15,9 9,15" />
                 </svg>
@@ -140,11 +191,21 @@
             <!-- Delete Account -->
             <NuxtLink to="/campus-pulse/delete-account" class="cp-delete-btn">
               <span>Request Account Deletion</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="3 6 5 6 21 6"/>
-                <path d="M19 6l-1 14H6L5 6"/>
-                <path d="M10 11v4M14 11v4"/>
-                <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="3 6 5 6 21 6" />
+                <path d="M19 6l-1 14H6L5 6" />
+                <path d="M10 11v4M14 11v4" />
+                <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
               </svg>
             </NuxtLink>
           </div>
@@ -167,16 +228,34 @@ useHead({
       content:
         "Campus Pulse is a free anonymous platform for Pakistani university students to rate teachers, review courses, and discover universities â€” built by 2code Solutions.",
     },
-    { name: "keywords", content: "Campus Pulse, Pakistani university app, rate teachers, anonymous reviews, university ratings, edtech Pakistan, Flutter app, 2code Solutions" },
+    {
+      name: "keywords",
+      content:
+        "Campus Pulse, Pakistani university app, rate teachers, anonymous reviews, university ratings, edtech Pakistan, Flutter app, 2code Solutions",
+    },
     { name: "robots", content: "index, follow" },
     { property: "og:type", content: "website" },
-    { property: "og:title", content: "Campus Pulse â€” Anonymous University Reviews App" },
-    { property: "og:description", content: "Pakistani students rate teachers, review courses, and make smarter academic decisions anonymously. Built by 2code Solutions." },
+    {
+      property: "og:title",
+      content: "Campus Pulse â€” Anonymous University Reviews App",
+    },
+    {
+      property: "og:description",
+      content:
+        "Pakistani students rate teachers, review courses, and make smarter academic decisions anonymously. Built by 2code Solutions.",
+    },
     { property: "og:image", content: "/mockup1.jpeg" },
     { property: "og:url", content: "https://2codesolution.com/campus-pulse" },
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Campus Pulse â€” University Reviews App" },
-    { name: "twitter:description", content: "Rate teachers & review courses anonymously. Built for Pakistani students by 2code Solutions." },
+    {
+      name: "twitter:title",
+      content: "Campus Pulse â€” University Reviews App",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Rate teachers & review courses anonymously. Built for Pakistani students by 2code Solutions.",
+    },
     { name: "twitter:image", content: "/mockup1.jpeg" },
   ],
 });
@@ -196,7 +275,13 @@ onMounted(async () => {
 
   const subtitle = document.querySelector(".cp-subtitle");
   if (subtitle) {
-    gsap.from(subtitle, { y: 30, opacity: 0, duration: 0.7, delay: 0.15, ease: "power2.out" });
+    gsap.from(subtitle, {
+      y: 30,
+      opacity: 0,
+      duration: 0.7,
+      delay: 0.15,
+      ease: "power2.out",
+    });
   }
 
   const screens = document.querySelectorAll(".cp-screen-item");
@@ -222,49 +307,10 @@ onMounted(async () => {
       ease: "power2.out",
     });
   }
-
 });
 </script>
 
 <style scoped>
-.campus-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--grey);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.cp-nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 5rem;
-  padding: 0 var(--pad);
-}
-
-.cp-nav-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  color: var(--black);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.cp-nav-back:hover {
-  opacity: 0.55;
-}
-
-@media (max-width: 768px) {
-  .cp-nav-inner {
-    padding: 0 1rem;
-    height: 3.5rem;
-  }
-}
-
 .cp-hero {
   padding-top: 3rem;
   padding-bottom: 4rem;
@@ -520,7 +566,9 @@ onMounted(async () => {
   font-weight: 600;
   letter-spacing: -0.02em;
   text-decoration: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .cp-legal-btn:hover {
@@ -551,7 +599,10 @@ onMounted(async () => {
   font-weight: 600;
   letter-spacing: -0.02em;
   text-decoration: none;
-  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
 }
 
 .cp-delete-btn:hover {
@@ -567,4 +618,3 @@ onMounted(async () => {
   }
 }
 </style>
-

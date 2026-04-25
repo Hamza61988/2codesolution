@@ -19,7 +19,10 @@
       <!-- Project Cards -->
       <div class="flex flex-col gap-16 md:gap-20">
         <!-- Project 1: Campus Pulse -->
-        <NuxtLink to="/campus-pulse" class="project-card group cursor-pointer block">
+        <NuxtLink
+          to="/campus-pulse"
+          class="project-card group cursor-pointer block"
+        >
           <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
             <!-- Image -->
             <div
@@ -38,9 +41,7 @@
                   class="dot"
                   style="width: 0.375rem; height: 0.375rem"
                 ></div>
-                <span class="dot-label text-xs"
-                  >EdTech Platform</span
-                >
+                <span class="dot-label text-xs">EdTech Platform</span>
               </div>
               <h3
                 class="text-black text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight group-hover:opacity-60 transition-opacity"
@@ -65,9 +66,18 @@
                   >Appwrite</span
                 >
               </div>
-              <div class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-black group-hover:gap-3 transition-all">
+              <div
+                class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-black group-hover:gap-3 transition-all"
+              >
                 View App
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
                   <line x1="2" y1="7" x2="12" y2="7" />
                   <polyline points="7,2 12,7 7,12" />
                 </svg>
@@ -80,7 +90,12 @@
         <div class="w-full h-px bg-black/5"></div>
 
         <!-- Project 2: REY Bot -->
-        <div class="project-card group cursor-pointer">
+        <a
+          href="https://rey-dashboard.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card group cursor-pointer block"
+        >
           <div
             class="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-start"
           >
@@ -128,13 +143,18 @@
               </div>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- Divider -->
         <div class="w-full h-px bg-black/5"></div>
 
         <!-- Project 3: Aqua Homes -->
-        <a href="https://www.aquahomesolution.company/" target="_blank" rel="noopener noreferrer" class="project-card group cursor-pointer block">
+        <a
+          href="https://www.aquahomesolution.company/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-card group cursor-pointer block"
+        >
           <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
             <!-- Image -->
             <div
@@ -153,9 +173,7 @@
                   class="dot"
                   style="width: 0.375rem; height: 0.375rem"
                 ></div>
-                <span class="dot-label text-xs"
-                  >Corporate Website</span
-                >
+                <span class="dot-label text-xs">Corporate Website</span>
               </div>
               <h3
                 class="text-black text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight group-hover:opacity-60 transition-opacity"
@@ -180,9 +198,18 @@
                   >Next.js</span
                 >
               </div>
-              <div class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-black group-hover:gap-3 transition-all">
+              <div
+                class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-black group-hover:gap-3 transition-all"
+              >
                 Visit Site
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
                   <line x1="2" y1="7" x2="12" y2="7" />
                   <polyline points="7,2 12,7 7,12" />
                 </svg>
@@ -376,4 +403,3 @@ onMounted(async () => {
   }
 });
 </script>
-

@@ -6,13 +6,14 @@ export default defineNuxtPlugin(() => {
   ).matches;
 
   const lenis = new Lenis({
-    duration: prefersReducedMotion ? 0.01 : 1.15,
+    duration: prefersReducedMotion ? 0.01 : 1.6,
     easing: (t: number) => 1 - Math.pow(1 - t, 4),
     smoothWheel: !prefersReducedMotion,
-    wheelMultiplier: 0.9,
-    touchMultiplier: 1.1,
+    // Lower multipliers make users scroll more to travel the same distance.
+    wheelMultiplier: 0.45,
+    touchMultiplier: 0.7,
     syncTouch: true,
-    lerp: prefersReducedMotion ? 1 : 0.085,
+    lerp: prefersReducedMotion ? 1 : 0.055,
   });
 
   let rafId = 0;

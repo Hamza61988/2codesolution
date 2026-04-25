@@ -1,30 +1,29 @@
 <template>
   <div class="relative w-full min-h-screen font-sans overflow-x-hidden">
-    <!-- Navbar -->
-    <header class="campus-navbar">
-      <div class="cp-nav-inner">
-        <NuxtLink to="/" class="nav-logo">2code Solutions</NuxtLink>
-        <NuxtLink to="/campus-pulse" class="cp-nav-back">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
-            <line x1="14" y1="8" x2="2" y2="8" />
-            <polyline points="7,3 2,8 7,13" />
-          </svg>
-          Campus Pulse
-        </NuxtLink>
-      </div>
-    </header>
+    <CampusNavbar back-to="/campus-pulse" back-label="Campus Pulse" />
 
     <main>
       <section class="da-section">
         <div class="w-container">
           <div class="section-card is-shaped">
-
             <!-- Warning badge -->
             <div class="da-warning-badge">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                <line x1="12" y1="9" x2="12" y2="13"/>
-                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
               </svg>
               Permanent Action
             </div>
@@ -32,18 +31,30 @@
             <!-- Heading -->
             <h1 class="da-title">Delete Account</h1>
             <p class="da-subtitle">
-              Submitting this form sends a deletion request to our team. Your account and all associated data will be permanently removed within <strong>30 days</strong>. This action cannot be undone.
+              Submitting this form sends a deletion request to our team. Your
+              account and all associated data will be permanently removed within
+              <strong>30 days</strong>. This action cannot be undone.
             </p>
 
             <!-- What gets deleted -->
             <div class="da-info-grid">
               <div class="da-info-card da-info-deleted">
                 <div class="da-info-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="3 6 5 6 21 6"/>
-                    <path d="M19 6l-1 14H6L5 6"/>
-                    <path d="M10 11v4M14 11v4"/>
-                    <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="3 6 5 6 21 6" />
+                    <path d="M19 6l-1 14H6L5 6" />
+                    <path d="M10 11v4M14 11v4" />
+                    <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
                   </svg>
                 </div>
                 <div>
@@ -58,8 +69,18 @@
               </div>
               <div class="da-info-card da-info-retained">
                 <div class="da-info-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
                 </div>
                 <div>
@@ -75,7 +96,10 @@
             <!-- Form -->
             <form class="da-form" @submit.prevent="handleSubmit">
               <div class="da-form-row">
-                <label class="da-label" for="email">Registered email address <span class="da-required">*</span></label>
+                <label class="da-label" for="email"
+                  >Registered email address
+                  <span class="da-required">*</span></label
+                >
                 <input
                   id="email"
                   v-model="form.email"
@@ -87,25 +111,49 @@
               </div>
 
               <div class="da-form-row">
-                <label class="da-label" for="reason">Reason for deletion <span class="da-required">*</span></label>
+                <label class="da-label" for="reason"
+                  >Reason for deletion <span class="da-required">*</span></label
+                >
                 <div class="da-select-wrap">
-                  <select id="reason" v-model="form.reason" class="da-select" required>
+                  <select
+                    id="reason"
+                    v-model="form.reason"
+                    class="da-select"
+                    required
+                  >
                     <option value="" disabled>Select a reason…</option>
-                    <option value="no_longer_student">I'm no longer a student</option>
+                    <option value="no_longer_student">
+                      I'm no longer a student
+                    </option>
                     <option value="privacy_concerns">Privacy concerns</option>
                     <option value="not_useful">App is not useful to me</option>
-                    <option value="duplicate_account">I have a duplicate account</option>
-                    <option value="bad_experience">Bad experience with the app</option>
+                    <option value="duplicate_account">
+                      I have a duplicate account
+                    </option>
+                    <option value="bad_experience">
+                      Bad experience with the app
+                    </option>
                     <option value="other">Other</option>
                   </select>
-                  <svg class="da-select-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <polyline points="2,5 7,10 12,5"/>
+                  <svg
+                    class="da-select-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <polyline points="2,5 7,10 12,5" />
                   </svg>
                 </div>
               </div>
 
               <div class="da-form-row">
-                <label class="da-label" for="details">Additional details <span class="da-optional">(optional)</span></label>
+                <label class="da-label" for="details"
+                  >Additional details
+                  <span class="da-optional">(optional)</span></label
+                >
                 <textarea
                   id="details"
                   v-model="form.details"
@@ -116,23 +164,33 @@
               </div>
 
               <div class="da-form-row">
-                <label class="da-label" for="confirm">Type <strong>DELETE</strong> to confirm <span class="da-required">*</span></label>
+                <label class="da-label" for="confirm"
+                  >Type <strong>DELETE</strong> to confirm
+                  <span class="da-required">*</span></label
+                >
                 <input
                   id="confirm"
                   v-model="form.confirm"
                   type="text"
                   class="da-input"
-                  :class="{ 'da-input-error': form.confirm && form.confirm !== 'DELETE' }"
+                  :class="{
+                    'da-input-error': form.confirm && form.confirm !== 'DELETE',
+                  }"
                   placeholder="DELETE"
                   required
                 />
-                <p v-if="form.confirm && form.confirm !== 'DELETE'" class="da-field-error">
+                <p
+                  v-if="form.confirm && form.confirm !== 'DELETE'"
+                  class="da-field-error"
+                >
                   Please type DELETE exactly as shown
                 </p>
               </div>
 
               <div class="da-form-footer">
-                <NuxtLink to="/campus-pulse" class="da-cancel-btn">Cancel</NuxtLink>
+                <NuxtLink to="/campus-pulse" class="da-cancel-btn"
+                  >Cancel</NuxtLink
+                >
                 <button
                   type="submit"
                   class="da-submit-btn"
@@ -142,7 +200,6 @@
                 </button>
               </div>
             </form>
-
           </div>
         </div>
       </section>
@@ -160,7 +217,8 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "Request deletion of your Campus Pulse account and associated data.",
+      content:
+        "Request deletion of your Campus Pulse account and associated data.",
     },
   ],
 });
@@ -189,61 +247,41 @@ onMounted(async () => {
 
   const subtitle = document.querySelector(".da-subtitle");
   if (subtitle) {
-    gsap.from(subtitle, { y: 20, opacity: 0, duration: 0.6, delay: 0.1, ease: "power2.out" });
+    gsap.from(subtitle, {
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      delay: 0.1,
+      ease: "power2.out",
+    });
   }
 
   const infoCards = document.querySelectorAll(".da-info-card");
   if (infoCards.length) {
-    gsap.from(infoCards, { y: 20, opacity: 0, duration: 0.5, stagger: 0.1, delay: 0.2, ease: "power2.out" });
+    gsap.from(infoCards, {
+      y: 20,
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.1,
+      delay: 0.2,
+      ease: "power2.out",
+    });
   }
 
   const formEl = document.querySelector(".da-form");
   if (formEl) {
-    gsap.from(formEl, { y: 20, opacity: 0, duration: 0.5, delay: 0.35, ease: "power2.out" });
+    gsap.from(formEl, {
+      y: 20,
+      opacity: 0,
+      duration: 0.5,
+      delay: 0.35,
+      ease: "power2.out",
+    });
   }
 });
 </script>
 
 <style scoped>
-/* Navbar */
-.campus-navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--grey);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.cp-nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 5rem;
-  padding: 0 var(--pad);
-}
-
-.cp-nav-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  color: var(--black);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.cp-nav-back:hover {
-  opacity: 0.55;
-}
-
-@media (max-width: 768px) {
-  .cp-nav-inner {
-    padding: 0 1rem;
-    height: 3.5rem;
-  }
-}
-
 /* Section */
 .da-section {
   padding-top: 3rem;
@@ -413,7 +451,9 @@ onMounted(async () => {
   font-family: inherit;
   color: var(--black);
   outline: none;
-  transition: border-color 0.2s ease, background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
   appearance: none;
   -webkit-appearance: none;
 }
@@ -490,7 +530,9 @@ onMounted(async () => {
   font-weight: 500;
   color: var(--grey-light);
   text-decoration: none;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
   white-space: nowrap;
 }
 
@@ -525,4 +567,3 @@ onMounted(async () => {
   cursor: not-allowed;
 }
 </style>
-
